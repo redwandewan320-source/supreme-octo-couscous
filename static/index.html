@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Downly — Video Downloader</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/">downly<span>.</span></a>
+    <nav><a href="#downloader">Downloader</a><a href="#history">History</a></nav>
+    <button id="themeBtn" class="icon-btn" aria-label="Toggle theme">☾</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow"><span class="pulse"></span> SIMPLE · FAST · PRIVATE</div>
+      <h1>Your media.<br><em>One simple download.</em></h1>
+      <p>Choose a platform, paste a public video link, and select your preferred format.</p>
+
+      <section class="panel" id="downloader">
+        <div class="step"><b>01</b><span>Choose platform</span></div>
+        <label for="platform">Platform</label>
+        <select id="platform">
+          <option value="">Select a platform first</option>
+          <option value="youtube">YouTube</option>
+          <option value="facebook">Facebook</option>
+          <option value="instagram">Instagram</option>
+          <option value="tiktok">TikTok</option>
+          <option value="x">X (Twitter)</option>
+          <option value="pinterest">Pinterest</option>
+          <option value="reddit">Reddit</option>
+          <option value="vimeo">Vimeo</option>
+          <option value="dailymotion">Dailymotion</option>
+          <option value="twitch">Twitch</option>
+          <option value="soundcloud">SoundCloud</option>
+          <option value="other">Other supported platform</option>
+        </select>
+
+        <div class="step second"><b>02</b><span>Paste video URL</span></div>
+        <div class="url-row">
+          <input id="url" type="url" placeholder="Choose a platform first..." disabled>
+          <button id="analyzeBtn" class="primary" disabled>Analyze link <span>→</span></button>
+        </div>
+        <p class="hint">Only download content you own or have permission to save.</p>
+
+        <div id="status" class="status" role="status"></div>
+        <div id="result" class="result hidden">
+          <div class="preview">
+            <img id="thumb" alt="Video thumbnail">
+            <div><strong id="videoTitle"></strong><small id="videoMeta"></small></div>
+          </div>
+          <div class="controls">
+            <div><label for="mode">Download type</label>
+              <select id="mode"><option value="video">Video</option><option value="mp3">Audio MP3</option><option value="thumbnail">Thumbnail</option></select>
+            </div>
+            <div id="qualityWrap"><label for="quality">Video quality</label>
+              <select id="quality">
+                <option value="best">Best available</option><option value="1080">1080p or lower</option>
+                <option value="720">720p or lower</option><option value="480">480p or lower</option><option value="360">360p or lower</option>
+              </select>
+            </div>
+          </div>
+          <button id="downloadBtn" class="primary full">Download now ↓</button>
+        </div>
+      </section>
+      <div class="platforms"><span>SUPPORTED PLATFORMS</span><div>YouTube · Facebook · Instagram · TikTok · X · Reddit · Vimeo · and more</div></div>
+    </section>
+
+    <section class="history-section" id="history">
+      <div class="history-head"><div><span class="eyebrow">YOUR ACTIVITY</span><h2>Recent downloads</h2></div><button id="clearHistory" class="text-btn">Clear history</button></div>
+      <div id="historyList" class="history-list"><p class="empty">Your download history will appear here on this device.</p></div>
+    </section>
+  </main>
+  <footer>© 2025 Downly. Use responsibly and respect creators’ rights.</footer>
+  <script src="/static/app.js"></script>
+</body>
+  </html>
+                                                              
